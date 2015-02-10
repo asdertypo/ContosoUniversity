@@ -14,26 +14,32 @@ namespace ContosoUniversity.DAL
             //base.Seed(context);
             var students = new List<Student>
             {
-                new Student{FirstMidName="张",LastName="三",EnrollmentDate=DateTime.Parse("2005-09-01")},
-                new Student{FirstMidName="李",LastName="四",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="杨",LastName="扬",EnrollmentDate=DateTime.Parse("2003-09-01")},
-                new Student{FirstMidName="黄",LastName="飞鸿",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="张",LastName="三丰",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="公孙",LastName="止",EnrollmentDate=DateTime.Parse("2001-09-01")},
-                new Student{FirstMidName="宁",LastName="缺",EnrollmentDate=DateTime.Parse("2003-09-01")},
-                new Student{FirstMidName="叶",LastName="问",EnrollmentDate=DateTime.Parse("2005-09-01")}
+                new Student{FirstMidName="张",LastName="三",EnrollmentDate=DateTime.Parse("2005-09-01"),Note="test"},
+                new Student{FirstMidName="李",LastName="四",EnrollmentDate=DateTime.Parse("2002-09-01"),Note="test"},
+                new Student{FirstMidName="杨",LastName="扬",EnrollmentDate=DateTime.Parse("2003-09-01"),Note="test"},
+                new Student{FirstMidName="黄",LastName="飞鸿",EnrollmentDate=DateTime.Parse("2002-09-01"),Note="test"},
+                new Student{FirstMidName="张",LastName="三丰",EnrollmentDate=DateTime.Parse("2002-09-01"),Note="test"},
+                new Student{FirstMidName="公孙",LastName="止",EnrollmentDate=DateTime.Parse("2001-09-01"),Note="test"},
+                new Student{FirstMidName="宁",LastName="缺",EnrollmentDate=DateTime.Parse("2003-09-01"),Note="test"},
+                new Student{FirstMidName="叶",LastName="问",EnrollmentDate=DateTime.Parse("2005-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="One",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="Two",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="Three",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="Four",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="Five",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
+                new Student{FirstMidName="test",LastName="Six",EnrollmentDate=DateTime.Parse("2014-09-01"),Note="test"},
             };
             students.ForEach(s => context.Students.Add(s));
             context.SaveChanges();
 
             var courses = new List<Course>{
-                new Course{CourseID=1050,Title="化学",Credits=3,},
-                new Course{CourseID=4022,Title="微观经济学",Credits=3,},
-                new Course{CourseID=4041,Title="宏观经济学",Credits=3,},
-                new Course{CourseID=1045,Title="微积分",Credits=4,},
-                new Course{CourseID=3141,Title="三角学",Credits=4,},
-                new Course{CourseID=2021,Title="写作",Credits=3,},
-                new Course{CourseID=2042,Title="文学赏析",Credits=4,}
+                new Course{CourseID=1050,Title="化学",Credits=3},
+                new Course{CourseID=4022,Title="微观经济学",Credits=3},
+                new Course{CourseID=4041,Title="宏观经济学",Credits=3},
+                new Course{CourseID=1045,Title="微积分",Credits=4},
+                new Course{CourseID=3141,Title="三角学",Credits=4},
+                new Course{CourseID=2021,Title="写作",Credits=3},
+                new Course{CourseID=2042,Title="文学赏析",Credits=4}
             };
             courses.ForEach(c => context.Courses.Add(c));
             context.SaveChanges();
